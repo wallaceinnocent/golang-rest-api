@@ -45,7 +45,7 @@ jobs:
         cache: true
     
     - name: Build
-      # This creates a binary named 'fiber-app' from your main.go
+      # This creates a binary named 'server' from your main.go
       run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o server ./cmd/server/main.go
     
     - name: Upload Artifact
@@ -64,7 +64,7 @@ jobs:
       - name: Download Binary
         uses: actions/download-artifact@v4
         with:
-          name: compiled-binary
+          name: server-binary
           # This puts 'fiber-app' back into the root directory
           path: .
 
