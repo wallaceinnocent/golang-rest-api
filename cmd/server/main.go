@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
-	"main/internals/routes"
 
 	"github.com/gofiber/fiber/v3"
+	"github.com/wallaceinnocent/go-rest-api/internals/routes"
 )
 
 func init() {
