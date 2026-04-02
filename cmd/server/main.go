@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"net/http"
+	"main/internals/routes"
 
 	"github.com/gofiber/fiber/v3"
 )
@@ -13,11 +13,7 @@ func init() {
 func main() {
 	app := fiber.New()
 
-	app.Get("/", func(c fiber.Ctx) error {
-		return c.Status(http.StatusOK).JSON(fiber.Map{
-			"message": "Hello world",
-		})
-	})
+	routes.CreateRoutes(app)
 	app.Listen(":8080")
 
 }
