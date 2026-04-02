@@ -1,0 +1,5 @@
+package helperfuntions
+
+func InitControllers() {
+
+}
